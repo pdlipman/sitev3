@@ -36,9 +36,9 @@ export default class SidebarLeft extends Component {
                 label: 'About',
             },
             {
-                name: 'book',
-                path: '/book',
-                label: 'Books',
+                name: 'library',
+                path: '/library',
+                label: 'Comics',
             },
         ];
 

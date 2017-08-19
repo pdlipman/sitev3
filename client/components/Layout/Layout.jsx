@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Container, Grid } from 'semantic-ui-react';
 
 import Menu from './Navigation/Menu.jsx';
+import '../../index.css';
 
 export default class Layout extends React.Component {
     static propTypes = {
