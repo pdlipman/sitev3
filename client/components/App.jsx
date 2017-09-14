@@ -7,14 +7,19 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from './reducers/combinedReducers.jsx';
+import Cookies from 'universal-cookie';
 
 import About from './About/About.jsx';
 import Library from './Comic/Library.jsx';
 import Home from './Pages/Home.jsx';
 import Layout from './Layout/Layout.jsx';
+import Dashboard from './Dashboard/Dashboard.jsx';
 
 import Register from './Auth/Register.jsx';
+import Login from './Auth/Login.jsx';
+import RequireAuth from './Auth/RequireAuth.jsx';
 
+import { AUTH_USER } from './Auth/actions/authActions.jsx';
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
     rootReducer,
@@ -26,6 +31,13 @@ const store = createStore(
     ),
 );
 /* eslint-enable */
+
+const cookie = new Cookies();
+const token = cookie.get('token');
+
+if (token) {
+    store.dispatch({ type: AUTH_USER });
+}
 
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function, max-len
@@ -50,6 +62,14 @@ export default class App extends React.Component { // eslint-disable-line react/
                         <Route
                             path='/register'
                             component={Register}
+                        />
+                        <Route
+                            path='/login'
+                            component={Login}
+                        />
+                        <Route
+                            path='/dashboard'
+                            component={RequireAuth(Dashboard)}
                         />
                     </Layout>
                 </Router>

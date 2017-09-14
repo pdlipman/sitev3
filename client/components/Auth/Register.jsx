@@ -46,8 +46,6 @@ function validate(formProps) {
         errors.password = 'Please enter a password.';
     }
 
-    console.log(errors);
-
     return errors;
 }
 
@@ -71,7 +69,7 @@ export default class Register extends React.Component {
         message: '',
     };
 
-    static renderError(errorMessage) {
+    renderError(errorMessage) {
         return (
             <div>
                 <span><strong>Error:</strong> { errorMessage } </span>
@@ -116,7 +114,29 @@ export default class Register extends React.Component {
                             />
                         </div>
                     </div>
-
+                    <div className='row'>
+                        <div className='column'>
+                            <label htmlFor='email'>Email</label>
+                            <Field
+                                name='email'
+                                className='form-control'
+                                component={renderField}
+                                type='text'
+                            />
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='column'>
+                            <label htmlFor='password'>Password</label>
+                            <Field
+                                name='password'
+                                className='form-control'
+                                component={renderField}
+                                type='password'
+                            />
+                        </div>
+                    </div>
+                    <button type='submit'>Register</button>
                 </form>
             </div>
         );

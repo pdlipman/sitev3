@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 @connect(mapStateToProps)
 export default class Dashboard extends React.Component {
     static propTypes = {
-        content: PropTypes.object,
+        content: PropTypes.string,
     };
 
     renderContent() {
@@ -23,6 +23,7 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <div>
+                DASHBOARD
                 {this.renderContent()}
             </div>
         );
