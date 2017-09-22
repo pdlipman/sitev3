@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-    content: state.auth.content,
+    user: state.auth.user,
 });
 
 @connect(mapStateToProps)
 export default class Dashboard extends React.Component {
     static propTypes = {
-        content: PropTypes.string,
+        user: PropTypes.object,
     };
 
     renderContent() {
         const {
-            content,
+            user,
         } = this.props;
 
-        return content ? <p>{content}</p> : '';
+        return user ? <p>{user.role}</p> : '';
     }
 
     render() {

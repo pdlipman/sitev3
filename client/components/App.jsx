@@ -34,9 +34,10 @@ const store = createStore(
 
 const cookie = new Cookies();
 const token = cookie.get('token');
-
+const user = cookie.get('user');
 if (token) {
-    store.dispatch({ type: AUTH_USER });
+    console.log(user);
+    store.dispatch({ type: AUTH_USER, user });
 }
 
 

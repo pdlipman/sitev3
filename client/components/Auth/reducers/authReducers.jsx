@@ -20,6 +20,7 @@ export default function (state = INITIAL_STATE, action) {
                 error: '',
                 message: '',
                 authenticated: true,
+                user: action.user,
             };
         }
         case AUTH_ERROR: {

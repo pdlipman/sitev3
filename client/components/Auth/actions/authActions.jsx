@@ -3,9 +3,10 @@ export const AUTH_ERROR = 'AUTH_ERROR';
 export const UNAUTH_USER = 'UNAUTH_USER';
 export const PROTECTED_TEST = 'PROTECTED_TEST';
 
-export function authenticateUser() {
+export function authenticateUser(user) {
     return {
         type: AUTH_USER,
+        user,
     };
 }
 
