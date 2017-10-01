@@ -1,4 +1,5 @@
 import React from 'react';
+import Cookies from 'universal-cookie';
 import {
     HashRouter as Router,
     Route,
@@ -7,13 +8,11 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from './reducers/combinedReducers.jsx';
-import Cookies from 'universal-cookie';
 
-import About from './About/About.jsx';
-import Library from './Comic/Library.jsx';
 import Home from './Pages/Home.jsx';
 import Layout from './Layout/Layout.jsx';
 import Dashboard from './Dashboard/Dashboard.jsx';
+import Content from './Content/Content.jsx';
 
 import Register from './Auth/Register.jsx';
 import Login from './Auth/Login.jsx';
@@ -36,7 +35,6 @@ const cookie = new Cookies();
 const token = cookie.get('token');
 const user = cookie.get('user');
 if (token) {
-    console.log(user);
     store.dispatch({ type: AUTH_USER, user });
 }
 
@@ -53,14 +51,6 @@ export default class App extends React.Component { // eslint-disable-line react/
                             component={Home}
                         />
                         <Route
-                            path='/about'
-                            component={About}
-                        />
-                        <Route
-                            path='/library'
-                            component={Library}
-                        />
-                        <Route
                             path='/register'
                             component={Register}
                         />
@@ -71,6 +61,10 @@ export default class App extends React.Component { // eslint-disable-line react/
                         <Route
                             path='/dashboard'
                             component={RequireAuth(Dashboard)}
+                        />
+                        <Route
+                            path='/content'
+                            component={Content}
                         />
                     </Layout>
                 </Router>

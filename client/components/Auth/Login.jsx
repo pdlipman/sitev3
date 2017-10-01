@@ -9,7 +9,6 @@ import { loginUser } from './thunks/authThunks.jsx';
 
 const mapStateToProps = state => ({
     errorMessage: state.auth.error,
-    message: state.auth.message,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -26,13 +25,11 @@ export default class Login extends React.Component {
     static propTypes = {
         errorMessage: PropTypes.string,
         handleSubmit: PropTypes.func.isRequired,
-        message: PropTypes.string,
         login: PropTypes.func.isRequired,
     };
 
     static defaultProps = {
         errorMessage: '',
-        message: '',
     };
 
     handleLoginSubmit = (formProps) => {
@@ -40,8 +37,11 @@ export default class Login extends React.Component {
         login(formProps);
     };
 
-    renderError(errorMessage) {
-        return (
+    renderError() {
+        const {
+            errorMessage,
+        } = this.props;
+        return errorMessage && (
             <div>
                 <span><strong>Error:</strong> { errorMessage } </span>
             </div>
@@ -51,12 +51,11 @@ export default class Login extends React.Component {
     render() {
         const {
             handleSubmit,
-            errorMessage,
         } = this.props;
 
         return (
             <div>
-                { errorMessage && this.renderError(errorMessage)}
+                { this.renderError()}
                 <form
                     onSubmit={handleSubmit(this.handleLoginSubmit)}
                 >
@@ -87,5 +86,4 @@ export default class Login extends React.Component {
             </div>
         );
     }
-
 }

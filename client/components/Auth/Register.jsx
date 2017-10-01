@@ -16,7 +16,16 @@ const mapDispatchToProps = dispatch => ({
     register: bindActionCreators(registerUser, dispatch),
 });
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
+/* eslint-disable react/prop-types */
+const renderField = ({
+    input,
+    label,
+    type,
+    meta: {
+        touched,
+        error,
+    },
+}) => (
     <div>
         <input
             {...input}
@@ -26,6 +35,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
         {touched && error && <span>{error}</span>}
     </div>
 );
+/* eslint-disable react/prop-types */
 
 function validate(formProps) {
     const errors = {};
@@ -60,37 +70,37 @@ export default class Register extends React.Component {
     static propTypes = {
         errorMessage: PropTypes.string,
         handleSubmit: PropTypes.func.isRequired,
-        message: PropTypes.string,
         register: PropTypes.func.isRequired,
     };
 
     static defaultProps = {
         errorMessage: '',
-        message: '',
     };
-
-    renderError(errorMessage) {
-        return (
-            <div>
-                <span><strong>Error:</strong> { errorMessage } </span>
-            </div>
-        );
-    }
 
     handleRegisterSubmit = (formProps) => {
         const { register } = this.props;
         register(formProps);
     };
 
+    renderError() {
+        const {
+            errorMessage,
+        } = this.props;
+        return errorMessage && (
+            <div>
+                <span><strong>Error:</strong> { errorMessage } </span>
+            </div>
+        );
+    }
+
     render() {
         const {
             handleSubmit,
-            errorMessage,
         } = this.props;
 
         return (
             <div>
-                { errorMessage && this.renderError(errorMessage)}
+                { this.renderError()}
                 <form
                     onSubmit={handleSubmit(this.handleRegisterSubmit)}
                 >
@@ -141,5 +151,4 @@ export default class Register extends React.Component {
             </div>
         );
     }
-
 }

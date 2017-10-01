@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 export default function RequireAuth(ComposedComponent) {
+    const mapStateToProps = state => ({
+        authenticated: state.auth.authenticated,
+    });
+
     class Authentication extends React.Component {
         static propTypes = {
-            authenticated: PropTypes.bool,
+            authenticated: PropTypes.bool.isRequired,
         };
 
         static contextTypes = {
@@ -13,10 +17,6 @@ export default function RequireAuth(ComposedComponent) {
         };
 
         componentWillMount() {
-            const {
-                router,
-            } = this.context;
-
             if (!this.props.authenticated) {
                 // router.push('/login');
                 window.location.href = '/#/login';
@@ -24,10 +24,6 @@ export default function RequireAuth(ComposedComponent) {
         }
 
         componentWillUpdate(nextProps) {
-            const {
-                router,
-            } = this.context;
-
             if (!nextProps.authenticated) {
                 // router.push('/login');
                 window.location.href = '/#/login';
@@ -42,9 +38,6 @@ export default function RequireAuth(ComposedComponent) {
             );
         }
     }
-    const mapStateToProps = (state) => ({
-        authenticated: state.auth.authenticated,
-    });
 
     return connect(mapStateToProps)(Authentication);
 }

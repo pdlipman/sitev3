@@ -5,6 +5,15 @@ import * as authActionCreators from '../actions/authActions.jsx';
 
 const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
 
+export function logoutUser() {
+    return (dispatch) => {
+        dispatch(authActionCreators.unauthenticateUser());
+        const cookie = new Cookies();
+        cookie.remove('token', { path: '/' });
+        cookie.remove('user', { path: '/' });
+    };
+}
+
 export function errorHandler(dispatch, error, type) {
     let errorMessage = '';
 
@@ -32,7 +41,8 @@ export function errorHandler(dispatch, error, type) {
 
 export function loginUser({ email, password }) {
     return (dispatch) => {
-        axios.post(`${API_URL}/auth/login`, { email, password })
+        axios
+            .post(`${API_URL}/auth/login`, { email, password })
             .then((response) => {
                 const cookie = new Cookies();
                 const {
@@ -50,7 +60,8 @@ export function loginUser({ email, password }) {
 
 export function registerUser({ email, firstName, lastName, password }) {
     return (dispatch) => {
-        axios.post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
+        axios
+            .post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
             .then((response) => {
                 const cookie = new Cookies();
                 cookie.set('token', response.data.token, { path: '/' });
@@ -61,18 +72,17 @@ export function registerUser({ email, firstName, lastName, password }) {
     };
 }
 
-export function logoutUser() {
-    return (dispatch) => {
-        dispatch(authActionCreators.unauthenticateUser());
-        const cookie = new Cookies();
-        cookie.remove('token', { path: '/' });
-        cookie.remove('user', { path: '/' });
-    };
-}
-
 export function protectedTest() {
     return (dispatch) => {
-        axios.get(`${API_URL}/protected`, { headers: { Authorization: cookie.load('token') }, })
+        const cookie = new Cookies();
+        axios
+            .get(
+                `${API_URL}/protected`,
+                {
+                    headers: {
+                        Authorization: cookie.get('token'),
+                    },
+                })
             .then(response => dispatch(authActionCreators.protectedTest(response.data.content)))
             .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
     };

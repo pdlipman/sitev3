@@ -31,14 +31,19 @@ export default class SidebarLeft extends Component {
                 label: 'Home',
             },
             {
-                name: 'about',
-                path: '/about',
-                label: 'About',
+                name: 'content',
+                path: '/content',
+                label: 'Content',
             },
             {
-                name: 'library',
-                path: '/library',
-                label: 'Comics',
+                name: 'register',
+                path: '/register',
+                label: 'Register',
+            },
+            {
+                name: 'login',
+                path: '/login',
+                label: 'Login',
             },
         ];
 
