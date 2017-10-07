@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1507365649675" clover="3.2.0">
+  <project timestamp="1507365649675" name="All files">
+    <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="7" coveredelements="4" complexity="0" loc="5" ncloc="5" packages="3" files="3" classes="3">
+      <package name="sitev3">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="jestSetup.js" path="/Users/philiplipman/IdeaProjects/sitev3/jestSetup.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="sitev3.client.components.Layout.Header">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="IconHeader.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/components/Layout/Header/IconHeader.jsx">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="sitev3.client.components.Pages">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Home.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/components/Pages/Home.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

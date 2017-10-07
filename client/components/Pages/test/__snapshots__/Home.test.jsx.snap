@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pages/Home.jsx Home should render properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home>
+    Hello Jest!
+  </Home>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <IconHeader
+          contents="Home"
+          headerTag="h2"
+          iconName="home"
+          subHeader="Welcome to my site!"
+        />,
+        "This is the home page.",
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "contents": "Home",
+          "headerTag": "h2",
+          "iconName": "home",
+          "subHeader": "Welcome to my site!",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "This is the home page.",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <IconHeader
+            contents="Home"
+            headerTag="h2"
+            iconName="home"
+            subHeader="Welcome to my site!"
+          />,
+          "This is the home page.",
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "contents": "Home",
+            "headerTag": "h2",
+            "iconName": "home",
+            "subHeader": "Welcome to my site!",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "This is the home page.",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
