@@ -10,5 +10,4 @@ describe('Pages/NotFound.jsx', () => {
         );
         expect(wrapper).toMatchSnapshot();
     });
-
 });

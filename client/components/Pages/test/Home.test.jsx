@@ -10,5 +10,4 @@ describe('Pages/Home.jsx', () => {
         );
         expect(wrapper).toMatchSnapshot();
     });
-
 });
