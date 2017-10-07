@@ -8,7 +8,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dist": "webpack -p",
-    "lint": "eslint --ext .js --ext .jsx ."
+    "lint": "eslint --ext .js --ext .jsx .",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -49,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.4",
+    "jest": "^21.2.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9"
   }
