@@ -12,7 +12,9 @@ import rootReducer from './reducers/combinedReducers.jsx';
 import Home from './Pages/Home.jsx';
 import Layout from './Layout/Layout.jsx';
 import Dashboard from './Dashboard/Dashboard.jsx';
+
 import Content from './Content/Content.jsx';
+import AddCard from './Content/AddCard.jsx';
 
 import Register from './Auth/Register.jsx';
 import Login from './Auth/Login.jsx';
@@ -61,6 +63,10 @@ export default class App extends React.Component { // eslint-disable-line react/
                         <Route
                             path='/dashboard'
                             component={RequireAuth(Dashboard)}
+                        />
+                        <Route
+                            path='/addCard'
+                            component={RequireAuth(AddCard)}
                         />
                         <Route
                             path='/content'

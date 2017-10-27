@@ -36,6 +36,11 @@ module.exports = {
                 test: /\.(png|gif|jpg|svg)$/,
                 use: 'url-loader?limit=2048&name=assets/[name]-[hash].[ext]',
             },
+            {
+                test: /\.md$/,
+                loader: 'raw-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
     plugins: [HtmlWebpackPluginConfig],

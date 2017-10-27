@@ -3,7 +3,8 @@ import Cookies from 'universal-cookie';
 
 import * as authActionCreators from '../actions/authActions.jsx';
 
-const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
+//const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
+const API_URL = 'http://localhost:8090/api';
 
 export function logoutUser() {
     return (dispatch) => {
@@ -82,7 +83,8 @@ export function protectedTest() {
                     headers: {
                         Authorization: cookie.get('token'),
                     },
-                })
+                },
+            )
             .then(response => dispatch(authActionCreators.protectedTest(response.data.content)))
             .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
     };

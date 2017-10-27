@@ -6,8 +6,10 @@ import { connect } from 'react-redux';
 
 import { Card } from 'semantic-ui-react';
 
+import MarkdownPage from '../Pages/MarkdownPage.jsx';
+import resume from '../../../assets/content/philip-lipman-resume-07oct2017.md';
+
 import {
-    addCard,
     getCards,
 } from './thunks/contentThunks.jsx';
 
@@ -17,14 +19,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    addNewCard: bindActionCreators(addCard, dispatch),
     getAllCards: bindActionCreators(getCards, dispatch),
 });
 
 @connect(mapStateToProps, mapDispatchToProps)
 export default class Content extends React.Component {
     static propTypes = {
-        addNewCard: PropTypes.func.isRequired,
         getAllCards: PropTypes.func.isRequired,
         user: PropTypes.shape(
             {
@@ -89,6 +89,9 @@ export default class Content extends React.Component {
                 >
                     {this.renderCards()}
                 </Card.Group>
+                <MarkdownPage
+                    content={resume}
+                />
             </div>
         );
     }

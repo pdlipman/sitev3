@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { Field, reduxForm } from 'redux-form';
 
 import { registerUser } from './thunks/authThunks.jsx';
+import { renderField } from '../FormComponents/formComponents.jsx';
 
 const mapStateToProps = state => ({
     errorMessage: state.auth.error,
@@ -15,27 +16,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     register: bindActionCreators(registerUser, dispatch),
 });
-
-/* eslint-disable react/prop-types */
-const renderField = ({
-    input,
-    label,
-    type,
-    meta: {
-        touched,
-        error,
-    },
-}) => (
-    <div>
-        <input
-            {...input}
-            placeholder={label}
-            type={type}
-        />
-        {touched && error && <span>{error}</span>}
-    </div>
-);
-/* eslint-disable react/prop-types */
 
 function validate(formProps) {
     const errors = {};
