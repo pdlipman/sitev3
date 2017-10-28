@@ -3,8 +3,8 @@ import Cookies from 'universal-cookie';
 
 import * as contentActionCreators from '../actions/contentActions.jsx';
 
-// const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
-const API_URL = 'http://localhost:8090/api';
+const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
+// const API_URL = 'http://localhost:8090/api';
 
 export function errorHandler(dispatch, error, type) {
     let errorMessage = '';
@@ -63,9 +63,9 @@ export function addNewCard({ label, parentId, content }) {
                     },
                 },
             )
-            // .then(() => {
-            //     getCards();
-            // })
+            .then(() => {
+                getCards();
+            })
             .catch((error) => {
                 errorHandler(dispatch, error.response, contentActionCreators.CONTENT_ERROR);
             });

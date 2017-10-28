@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    addCard: bindActionCreators(addNewCard, dispatch),
+    handleAddNewCard: bindActionCreators(addNewCard, dispatch),
 });
 
 const form = {
@@ -27,7 +27,7 @@ export default class AddCard extends React.Component {
     static propTypes = {
         errorMessage: PropTypes.string,
         handleSubmit: PropTypes.func.isRequired,
-        addCard: PropTypes.func.isRequired,
+        handleAddNewCard: PropTypes.func.isRequired,
     };
 
     static defaultProps = {
@@ -35,8 +35,8 @@ export default class AddCard extends React.Component {
     };
 
     handleAddCardSubmit = (formProps) => {
-        const { addCard } = this.props;
-        addCard(formProps);
+        const { handleAddNewCard } = this.props;
+        handleAddNewCard(formProps);
     };
 
     renderError() {

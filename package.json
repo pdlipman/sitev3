@@ -9,7 +9,7 @@
     "start": "webpack-dev-server",
     "dist": "webpack -p",
     "lint": "eslint --ext .js --ext .jsx .",
-    "test": "jest",
+    "test": "jest --verbose",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },

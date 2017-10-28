@@ -3,8 +3,8 @@ import Cookies from 'universal-cookie';
 
 import * as authActionCreators from '../actions/authActions.jsx';
 
-//const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
-const API_URL = 'http://localhost:8090/api';
+const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
+// const API_URL = 'http://localhost:8090/api';
 
 export function logoutUser() {
     return (dispatch) => {
