@@ -51,7 +51,7 @@ export function loginUser({ email, password }) {
             cookie.set('token', token, { path: '/' });
             cookie.set('user', user, { path: '/' });
             dispatch(authActionCreators.authenticateUser(user));
-            // window.location.href = '/#/dashboard';
+            window.location.href = '/#/dashboard';
         })
         .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
 }
