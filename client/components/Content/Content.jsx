@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 import { Card } from 'semantic-ui-react';
 
 import MarkdownPage from '../Pages/MarkdownPage.jsx';
@@ -11,15 +11,18 @@ import resume from '../../../assets/content/philip-lipman-resume-07oct2017.md';
 
 import {
     getCards,
+    setSelectedCard,
 } from './thunks/contentThunks.jsx';
 
 const mapStateToProps = state => ({
     user: state.auth.user,
     cards: state.content.cards,
+    selectedCardId: state.content.selectedCardId,
 });
 
 const mapDispatchToProps = dispatch => ({
     getAllCards: bindActionCreators(getCards, dispatch),
+    selectCard: bindActionCreators(setSelectedCard, dispatch),
 });
 
 @connect(mapStateToProps, mapDispatchToProps)
@@ -44,6 +47,12 @@ export default class Content extends React.Component {
                 },
             ),
         ).isRequired,
+        selectCard: PropTypes.func.isRequired,
+        selectedCardId: PropTypes.string,
+    };
+
+    static defaultProps = {
+        selectedCardId: '',
     };
 
     componentWillMount() {
@@ -57,31 +66,44 @@ export default class Content extends React.Component {
         return user && user.role.includes(roleToCheck);
     }
 
-    handleAddCard() {
-        const {
-            addNewCard,
-        } = this.props;
+    handleAddCard = () => (
+        <Link to='/addCard'>
+            Add New Card
+        </Link>
+    );
 
-        return addNewCard && <p>Add New Card</p>;
-    }
+    handleSelectCard = (cardId) => {
+        const {
+            selectCard,
+        } = this.props;
+        selectCard({ cardId });
+    };
 
     renderCards() {
         const {
             cards,
         } = this.props;
 
-        return cards.map(card => (
-            <Card
-                key={card._id} // eslint-disable-line no-underscore-dangle
-                header={card.label}
-            />
-        ));
+        return cards.map((card) => {
+            const cardId = card._id; // eslint-disable-line no-underscore-dangle
+
+            return (
+                <Card
+                    key={cardId}
+                    header={card.label}
+                    onClick={() => this.handleSelectCard(cardId)}
+                />
+            );
+        });
     }
 
     render() {
+        const {
+            selectedCardId,
+        } = this.props;
         return (
             <div>
-                Hey Now
+                Selected card id: { selectedCardId }
                 {this.isRole('Admin') && this.handleAddCard()}
                 <Card.Group
                     itemsPerRow={3}
@@ -89,6 +111,7 @@ export default class Content extends React.Component {
                 >
                     {this.renderCards()}
                 </Card.Group>
+
                 <MarkdownPage
                     content={resume}
                 />

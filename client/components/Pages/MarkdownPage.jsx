@@ -5,7 +5,7 @@ import hljs from 'highlight.js';
 
 import './MarkdownPage.css';
 
-export default class MarkdownPage extends React.Component {
+export default class MarkdownPage extends React.Component { // eslint-disable-line react/prefer-stateless-function,max-len
     static propTypes = {
         content: PropTypes.string.isRequired,
     };
@@ -31,14 +31,14 @@ export default class MarkdownPage extends React.Component {
                                 try {
                                     return hljs.highlight(lang, str).value;
                                 } catch (err) {
-                                    console.log(err);
+                                    console.log(err); // eslint-disable-line no-console
                                 }
                             }
 
                             try {
                                 return hljs.highlightAuto(str).value;
                             } catch (err) {
-                                console.log(err);
+                                console.log(err); // eslint-disable-line no-console
                             }
 
                             return ''; // use external default escaping

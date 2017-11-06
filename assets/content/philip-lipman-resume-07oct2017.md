@@ -1,19 +1,22 @@
 ### Philip Lipman 
-lipman.p@yahoo.com
+pdlipman@yahoo.com
 ###### Technologies
-* Javascript, React, Redux, JQuery, CSS, HTML
+* Javascript, React, Redux, Node
 * Java, Spring Boot
 * MySQL, MongoDB
-#### Work Experience
+##### Work Experience
 ###### Senior Software Engineer - <a class="resume-link resume-link-2" href="http://www.marketo.com/"><span class="resume-link-text">Marketo</span></a>, January 2017 - present
-###### Java/UI Developer - <a class="resume-link resume-link-2" href="http://www.dealer.com/"><span class="resume-link-text">Dealer.com</span></a>, June 2014 - December 2016
-- Member of an Agile team responsible for developing on an large Java content management system (CMS) used by over 15000 customers. Responsibilities included developing new products, enhancing existing functionality, unit and integration testing, deploying to QA and Production environments (Apache Tomcat) using Jenkins, and troubleshooting.
+- Developed new enterprise marketing CMS. UI was written using React with Redux. The UI communicates with a mid-level layer using Node to access both new APIs (Java) and legacy APIs (PHP).
+- Developed email script token live preview system. A user can create an email script token Velocity (in order to be compatible with the legacy system). Leveraged the existing PHP system to parse the token and display the rendered template to the user as a live preview.
+- Member of the tech committee, responsibilities include vetting new tech, onboarding, documentation.
+- Documenting unit testing to move forward with test driven development.
+- 
+###### Full Stack Developer - <a class="resume-link resume-link-2" href="http://www.dealer.com/"><span class="resume-link-text">Dealer.com</span></a>, June 2014 - December 2016
 - Developed a recommended inventory module for the user facing CMS using MVC pattern. A weighted query was created in the Java layer based on user browsing patterns. The vehicle database (Apache Solr) was queried, and the results were presented to the user using JavaScript and Bootstrap Sass.
 - Developed a Spring Boot REST API to gather information multiple inventory databases, including MySql and Solr.
 - Developed a React application to present the inventory data. The application uses fetch to call the Spring Boot REST service asyncronously, which returned a JSON object to provide content for the components, without the components having to wait to finish rendering.
 - Reusable React components, and a Redux state container were created for the inventory data sources and inventory items to keep the code base concise and maintainable.
 - Developed an Apache Camel batch service to retrieve and process payment and leasing financial data across all car dealership inventory, allowing customers to estimate accurate payments and pre-qualify for vehicle financing.
-- Coordinated with project managers and technical leads to design and implement a customizable tabbed slideshow module using JavaScript, Java and XML.
 ###### Software Developer - <a class="resume-link resume-link-2" href="http://www.rainworx.com/"><span class="resume-link-text">Rainworx Software</span></a>, September 2006 - June 2014
 - Developed AuctionWorx and rwAuction Pro online auction software as part of a three person team using the Microsoft .NET stack (C#, Razor, MS Sql Server) using the MVC pattern.
 - Designed and implemented buyers premium, flat, and consignment fee 

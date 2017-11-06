@@ -3,7 +3,8 @@ import Cookies from 'universal-cookie';
 
 import * as authActionCreators from '../actions/authActions.jsx';
 
-const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
+export const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
+
 // const API_URL = 'http://localhost:8090/api';
 
 export function logoutUser() {
@@ -18,10 +19,8 @@ export function logoutUser() {
 export function errorHandler(dispatch, error, type) {
     let errorMessage = '';
 
-    if (error.data.error) {
-        errorMessage = error.data.error;
-    } else if (error.data) {
-        errorMessage = error.data;
+    if (error.data) {
+        errorMessage = error.data.error || error.data;
     } else {
         errorMessage = error;
     }
@@ -41,42 +40,38 @@ export function errorHandler(dispatch, error, type) {
 }
 
 export function loginUser({ email, password }) {
-    return (dispatch) => {
-        axios
-            .post(`${API_URL}/auth/login`, { email, password })
-            .then((response) => {
-                const cookie = new Cookies();
-                const {
-                    token,
-                    user,
-                } = response.data;
-                cookie.set('token', token, { path: '/' });
-                cookie.set('user', user, { path: '/' });
-                dispatch(authActionCreators.authenticateUser(user));
-                window.location.href = '/#/dashboard';
-            })
-            .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
-    };
+    return (dispatch) => axios
+        .post(`${API_URL}/auth/login`, { email, password })
+        .then((response) => {
+            const cookie = new Cookies();
+            const {
+                token,
+                user,
+            } = response.data;
+            cookie.set('token', token, { path: '/' });
+            cookie.set('user', user, { path: '/' });
+            dispatch(authActionCreators.authenticateUser(user));
+            window.location.href = '/#/dashboard';
+        })
+        .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
 }
 
 export function registerUser({ email, firstName, lastName, password }) {
-    return (dispatch) => {
-        axios
-            .post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
-            .then((response) => {
-                const cookie = new Cookies();
-                cookie.set('token', response.data.token, { path: '/' });
-                cookie.set('user', response.data.user, { path: '/' });
-                dispatch(authActionCreators.authenticateUser());
-            })
-            .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
-    };
+    return (dispatch) => axios
+        .post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
+        .then((response) => {
+            const cookie = new Cookies();
+            cookie.set('token', response.data.token, { path: '/' });
+            cookie.set('user', response.data.user, { path: '/' });
+            dispatch(authActionCreators.authenticateUser());
+        })
+        .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
 }
 
 export function protectedTest() {
     return (dispatch) => {
         const cookie = new Cookies();
-        axios
+        return axios
             .get(
                 `${API_URL}/protected`,
                 {

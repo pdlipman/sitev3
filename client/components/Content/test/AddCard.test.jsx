@@ -2,36 +2,57 @@ import React from 'react';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
-import { shallow } from 'enzyme';
-
-import AddCard, { __RewireAPI__ as RewireApi } from '../AddCard.jsx';
+import AddCard, { __RewireAPI__ as AddCardRewireApi } from '../AddCard.jsx';
+import { shallowUntilTarget } from '../../../utils/testUtils';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
-const testState = {
+const testStateInitial = {
     content: {
         error: '',
     },
 };
 
-const store = mockStore(testState);
+const testStateWithError = {
+    content: {
+        error: 'Test: error message',
+    },
+};
 
-function shallowWrapper(props) {
-    const wrapper = shallow(
+function shallowWrapper(props, testState = testStateInitial) {
+    const store = mockStore(testState);
+    const wrapper = shallowUntilTarget(
         <AddCard
             store={store}
             handleSubmit={() => {}}
+            handleAddNewCard={() => {}}
             {...props}
         />,
+        'AddCard',
     );
     return wrapper;
 }
 
 describe('AddCard.jsx', () => {
     test('AddCard should render properly', () => {
-        const handleAddNewCard = () => {};
-        const wrapper = shallowWrapper({ handleAddNewCard });
+        const wrapper = shallowWrapper({});
         expect(wrapper).toMatchSnapshot();
+    });
+
+    test('AddCard should render with error properly', () => {
+        const wrapper = shallowWrapper({}, testStateWithError);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    test('AddCard.handleAddCardSubmit', () => {
+        const mockAddCard = jest.fn();
+
+        AddCardRewireApi.__Rewire__('addNewCard', () => mockAddCard); // eslint-disable-line no-underscore-dangle
+
+        const wrapper = shallowWrapper();
+        wrapper.instance().handleAddCardSubmit({ val: 'hello world' });
+        expect(mockAddCard).toHaveBeenCalled();
+        AddCardRewireApi.__ResetDependency__('addNewCard'); // eslint-disable-line no-underscore-dangle
     });
 });

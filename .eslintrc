@@ -10,6 +10,7 @@
         "indent": [2, 4, {"SwitchCase": 1}],
         "prefer-template": "off",
         "no-path-concat": "off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
         "react/prefer-es6-class": [1, "always"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "import/extensions": "off",
@@ -19,8 +20,8 @@
         "browser": true,
         "node": true,
         "jasmine": true,
-        "es6": true
-
+        "es6": true,
+        "jest": true
     }
 }
 

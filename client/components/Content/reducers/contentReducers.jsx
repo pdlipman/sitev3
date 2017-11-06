@@ -1,6 +1,7 @@
 import {
     GET_CARDS,
     CONTENT_ERROR,
+    SET_SELECTED_CARD,
 } from '../actions/contentActions.jsx';
 
 const INITIAL_STATE = {
@@ -19,6 +20,12 @@ export default function (state = INITIAL_STATE, action) {
             return {
                 ...state,
                 error: action.payload,
+            };
+        }
+        case SET_SELECTED_CARD: {
+            return {
+                ...state,
+                selectedCardId: action.cardId,
             };
         }
         default: {

@@ -3,16 +3,13 @@ import Cookies from 'universal-cookie';
 
 import * as contentActionCreators from '../actions/contentActions.jsx';
 
-const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
-// const API_URL = 'http://localhost:8090/api';
+export const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
 
 export function errorHandler(dispatch, error, type) {
     let errorMessage = '';
 
-    if (error.data.error) {
-        errorMessage = error.data.error;
-    } else if (error.data) {
-        errorMessage = error.data;
+    if (error.data) {
+        errorMessage = error.data.error || error.data;
     } else {
         errorMessage = error;
     }
@@ -31,27 +28,24 @@ export function errorHandler(dispatch, error, type) {
 }
 
 export function getCards() {
-    return (dispatch) => {
-        axios
-            .get(`${API_URL}/content/get-cards`)
-            .then((response) => {
-                const {
-                    cards,
-                } = response.data;
-                dispatch(contentActionCreators.getCards(cards));
-            })
-            .catch((error) => {
-                errorHandler(dispatch, error.response, contentActionCreators.CONTENT_ERROR);
-            });
-    };
+    return dispatch => axios
+        .get(`${API_URL}/content/get-cards`)
+        .then((response) => {
+            const {
+                cards,
+            } = response.data;
+            dispatch(contentActionCreators.getCards(cards));
+        })
+        .catch((error) => {
+            errorHandler(dispatch, error.response, contentActionCreators.CONTENT_ERROR);
+        });
 }
 
 export function addNewCard({ label, parentId, content }) {
     return (dispatch) => {
         const cookie = new Cookies();
-        axios
-            .post(
-                `${API_URL}/content/add-card`,
+        return axios
+            .post(`${API_URL}/content/add-card`,
                 {
                     content,
                     label,
@@ -69,5 +63,11 @@ export function addNewCard({ label, parentId, content }) {
             .catch((error) => {
                 errorHandler(dispatch, error.response, contentActionCreators.CONTENT_ERROR);
             });
+    };
+}
+
+export function setSelectedCard({ cardId }) {
+    return (dispatch) => {
+        dispatch(contentActionCreators.setSelectedCard(cardId));
     };
 }

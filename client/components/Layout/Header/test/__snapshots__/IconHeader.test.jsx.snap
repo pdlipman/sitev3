@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconHeader.jsx IconHeader render should throw error 1`] = `[Function]`;
+
+exports[`IconHeader.jsx IconHeader should render properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <IconHeader
+    contents="Test Contents"
+    headerTag="h2"
+    iconName="home"
+    subHeader=""
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "function",
+    "props": Object {
+      "as": "h2",
+      "children": Array [
+        <Icon
+          as="i"
+          name="home"
+        />,
+        <HeaderContent>
+          Test Contents
+          <HeaderSubheader>
+            
+          </HeaderSubheader>
+        </HeaderContent>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "as": "i",
+          "name": "home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            "Test Contents",
+            <HeaderSubheader>
+              
+            </HeaderSubheader>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Test Contents",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "function",
+            "props": Object {
+              "children": "",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "function",
+      "props": Object {
+        "as": "h2",
+        "children": Array [
+          <Icon
+            as="i"
+            name="home"
+          />,
+          <HeaderContent>
+            Test Contents
+            <HeaderSubheader>
+              
+            </HeaderSubheader>
+          </HeaderContent>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "as": "i",
+            "name": "home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              "Test Contents",
+              <HeaderSubheader>
+                
+              </HeaderSubheader>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Test Contents",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "function",
+              "props": Object {
+                "children": "",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

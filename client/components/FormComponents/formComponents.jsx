@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const renderField = (
+export const renderField = ( // eslint-disable-line import/prefer-default-export
     {
         input,
         label,
