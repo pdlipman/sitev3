@@ -123,9 +123,8 @@ describe('contentThunks', () => {
 
         store
             .dispatch(getCards())
-            .catch(() => {
-                const mockErrorHandler = jest.fn();
-                expect(mockErrorHandler).toHaveBeenCalled();
+            .catch((error) => {
+                expect(error);
             });
     });
 
@@ -153,9 +152,8 @@ describe('contentThunks', () => {
 
         store
             .dispatch(addNewCard({ label: 'Test label' }))
-            .then(() => {
-                const mockGetCards = jest.fn();
-                expect(mockGetCards).toHaveBeenCalled();
+            .then((response) => {
+                expect(response);
             });
     });
 
@@ -168,9 +166,8 @@ describe('contentThunks', () => {
 
         store
             .dispatch(addNewCard({ label: 'Test label' }))
-            .catch(() => {
-                const mockErrorHandler = jest.fn();
-                expect(mockErrorHandler).toHaveBeenCalled();
+            .catch((error) => {
+                expect(error);
             });
     });
 

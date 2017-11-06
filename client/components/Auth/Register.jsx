@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => ({
     register: bindActionCreators(registerUser, dispatch),
 });
 
-function validate(formProps) {
+export function validate(formProps) {
     const errors = {};
 
     if (!formProps.firstName) {

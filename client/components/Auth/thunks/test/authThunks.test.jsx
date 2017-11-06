@@ -136,49 +136,30 @@ describe('contentThunks', () => {
             });
     });
 
-    // test('authThunk registerUser', () => {
-    //     const store = mockStore({});
-    //     const mockAxios = new MockAdapter(axios);
-    //     const testUser = {
-    //         id: 1,
-    //         name: 'Test Name',
-    //     };
-    //     const expectedPayload = [
-    //         {
-    //             type: authActions.AUTH_USER,
-    //             user: testUser,
-    //         },
-    //     ];
-    //
-    //     mockAxios
-    //         .onPost(`${API_URL}/auth/register`)
-    //         .reply(200,
-    //             {
-    //                 user: testUser,
-    //             },
-    //         );
-    //     store
-    //         .dispatch(registerUser({}))
-    //         .then(() => {
-    //             expect(store.getActions()).toEqual(expectedPayload);
-    //         });
-    // });
-    //
-    // test('authThunk registerUser throws error', () => {
-    //     const store = mockStore({});
-    //     const mockAxios = new MockAdapter(axios);
-    //
-    //     mockAxios
-    //         .onPost(`${API_URL}/auth/register`)
-    //         .networkError();
-    //
-    //     store
-    //         .dispatch(registerUser({}))
-    //         .catch(() => {
-    //             const mockErrorHandler = jest.fn();
-    //             expect(mockErrorHandler).toHaveBeenCalled();
-    //         });
-    // });
+    test('authThunk registerUser', () => {
+        const store = mockStore({});
+        const mockAxios = new MockAdapter(axios);
+        const testUser = {
+            id: 1,
+            name: 'Test Name',
+        };
+        const expectedPayload = [
+            {
+                type: authActions.AUTH_USER,
+                user: testUser,
+            },
+        ];
+
+        mockAxios
+            .onPost(`${API_URL}/auth/register`)
+            .reply(200,
+                {
+                    user: testUser,
+                },
+            );
+        store
+            .dispatch(registerUser({}))
+            .then(() => { expect(store.getActions()).toEqual(expectedPayload); }); }); test('authThunk registerUser throws error', () => { const store = mockStore({}); const mockAxios = new MockAdapter(axios); mockAxios .onPost(`${API_URL}/auth/register`) .networkError(); store .dispatch(registerUser({})) .catch((error) => { expect(error); }); });
 
     test('authThunk protectedTest', () => {
         const store = mockStore({});

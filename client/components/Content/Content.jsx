@@ -8,6 +8,7 @@ import { Card } from 'semantic-ui-react';
 
 import MarkdownPage from '../Pages/MarkdownPage.jsx';
 import resume from '../../../assets/content/philip-lipman-resume-07oct2017.md';
+import mdtest from '../../../assets/content/mdtest.md';
 
 import {
     getCards,
@@ -37,7 +38,7 @@ export default class Content extends React.Component {
                 email: PropTypes.string,
                 role: PropTypes.arrayOf(PropTypes.string),
             },
-        ).isRequired,
+        ),
         cards: PropTypes.arrayOf(
             PropTypes.shape(
                 {
@@ -52,6 +53,7 @@ export default class Content extends React.Component {
     };
 
     static defaultProps = {
+        user: null,
         selectedCardId: '',
     };
 
@@ -113,7 +115,7 @@ export default class Content extends React.Component {
                 </Card.Group>
 
                 <MarkdownPage
-                    content={resume}
+                    content={mdtest}
                 />
             </div>
         );

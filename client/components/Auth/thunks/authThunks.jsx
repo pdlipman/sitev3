@@ -51,7 +51,7 @@ export function loginUser({ email, password }) {
             cookie.set('token', token, { path: '/' });
             cookie.set('user', user, { path: '/' });
             dispatch(authActionCreators.authenticateUser(user));
-            window.location.href = '/#/dashboard';
+            // window.location.href = '/#/dashboard';
         })
         .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
 }
@@ -61,9 +61,13 @@ export function registerUser({ email, firstName, lastName, password }) {
         .post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
         .then((response) => {
             const cookie = new Cookies();
-            cookie.set('token', response.data.token, { path: '/' });
-            cookie.set('user', response.data.user, { path: '/' });
-            dispatch(authActionCreators.authenticateUser());
+            const {
+                token,
+                user,
+            } = response.data;
+            cookie.set('token', token, { path: '/' });
+            cookie.set('user', user, { path: '/' });
+            dispatch(authActionCreators.authenticateUser(user));
         })
         .catch(error => errorHandler(dispatch, error.response, authActionCreators.AUTH_ERROR));
 }

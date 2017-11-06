@@ -3,8 +3,8 @@ import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
 import { shallowUntilTarget } from '../testUtils.jsx';
-import MockComponent from '../MockComponent.jsx';
-import MockWrappedComponent from '../MockWrappedComponent.jsx';
+import MockComponent from '../../../__mocks__/MockComponent.jsx';
+import MockWrappedComponent from '../../../__mocks__/MockWrappedComponent.jsx';
 
 describe('testUtils helper functions', () => {
     test('testutils.shallowUntilTarget should render', () => {
