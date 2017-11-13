@@ -1,18 +1,13 @@
 ### Philip Lipman 
-pdlipman@yahoo.com
+lipman.p@yahoo.com
 ###### Technologies
-* Javascript, React, Redux, Node
-* Java, Spring Boot
+* Javascript (React, Redux, Node), Java (Spring, Camel)
 * MySQL, MongoDB
-##### Work Experience
 ###### Senior Software Engineer - <a class="resume-link resume-link-2" href="http://www.marketo.com/"><span class="resume-link-text">Marketo</span></a>, January 2017 - present
 - Developed new enterprise marketing CMS. UI was written using React with Redux. The UI communicates with a mid-level layer using Node to access both new APIs (Java) and legacy APIs (PHP).
-- Developed email script token live preview system. A user can create an email script token Velocity (in order to be compatible with the legacy system). Leveraged the existing PHP system to parse the token and display the rendered template to the user as a live preview.
-- Member of the tech committee, responsibilities include vetting new tech, onboarding, documentation.
-- Documenting unit testing to move forward with test driven development.
-- 
+- Developed email script token live preview system. A user can create an email script token using Velocity (in order to be compatible with the legacy system). Leveraged the existing PHP system to parse the token and display the rendered template to the user as a live preview.
+- Member of the tech committee, responsibilities include vetting new tech, onboarding, documentation. Currently documenting unit testing standards to move forward with test driven development.
 ###### Full Stack Developer - <a class="resume-link resume-link-2" href="http://www.dealer.com/"><span class="resume-link-text">Dealer.com</span></a>, June 2014 - December 2016
-- Developed a recommended inventory module for the user facing CMS using MVC pattern. A weighted query was created in the Java layer based on user browsing patterns. The vehicle database (Apache Solr) was queried, and the results were presented to the user using JavaScript and Bootstrap Sass.
 - Developed a Spring Boot REST API to gather information multiple inventory databases, including MySql and Solr.
 - Developed a React application to present the inventory data. The application uses fetch to call the Spring Boot REST service asyncronously, which returned a JSON object to provide content for the components, without the components having to wait to finish rendering.
 - Reusable React components, and a Redux state container were created for the inventory data sources and inventory items to keep the code base concise and maintainable.
@@ -22,7 +17,7 @@ pdlipman@yahoo.com
 - Designed and implemented buyers premium, flat, and consignment fee 
 calculation and invoicing systems to help clients track and charge buyers and 
 sellers on their auction sites. 
-- Designed and implemented item watch notification system using Frozen Mountain Websync (WebSockets) to help buyers track bids and time left, updating the buyer dashboard and optionally sending email notifications. Designed and implemented real time pricing system using a messaging server to push updates to subscribers, reducing traffic on our network.
+- Designed and implemented real time item watch notification and pricing system using a messaging server to push updates to subscribers, reducing traffic on our network.
 ##### Education
-Bachelor of Science (B.S.), Software Engineering<br />
+Bachelor of Science (B.S.), Software Engineering<br /> 
 Vermont Technical College - Randolph, VT

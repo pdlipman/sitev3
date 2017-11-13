@@ -2,8 +2,10 @@ import axios from 'axios';
 import Cookies from 'universal-cookie';
 
 import * as contentActionCreators from '../actions/contentActions.jsx';
+import {
+    API_URL,
+} from '../../../utils/config/config.jsx';
 
-export const API_URL = 'http://tranquil-plains-96188.herokuapp.com/api';
 
 export function errorHandler(dispatch, error, type) {
     let errorMessage = '';

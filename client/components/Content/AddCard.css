@@ -1,0 +1,21 @@
+@import "../../../node_modules/highlight.js/styles/agate.css";
+@import "../../../node_modules/github-markdown-css/github-markdown.css";
+
+.mde-preview .highlight pre,
+.mde-preview pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background: #333;
+    border-radius: 3px;
+}
+
+.mde-preview .highlight pre code,
+.mde-preview pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #333;
+    color: white;
+}

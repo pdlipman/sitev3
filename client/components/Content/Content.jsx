@@ -81,6 +81,26 @@ export default class Content extends React.Component {
         selectCard({ cardId });
     };
 
+    renderCardContent() {
+        const {
+            selectedCardId,
+            cards,
+        } = this.props;
+
+        const selectedCard = cards.filter((card) => {
+            return card._id === selectedCardId; // eslint-disable-line no-underscore-dangle
+        }).shift();
+
+        const result = (
+            <MarkdownPage
+                content={selectedCard.content}
+            />
+        );
+
+        return result;
+
+    }
+
     renderCards() {
         const {
             cards,
@@ -114,9 +134,7 @@ export default class Content extends React.Component {
                     {this.renderCards()}
                 </Card.Group>
 
-                <MarkdownPage
-                    content={mdtest}
-                />
+                { selectedCardId && this.renderCardContent() }
             </div>
         );
     }
