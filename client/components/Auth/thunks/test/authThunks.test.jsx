@@ -159,7 +159,18 @@ describe('contentThunks', () => {
             );
         store
             .dispatch(registerUser({}))
-            .then(() => { expect(store.getActions()).toEqual(expectedPayload); }); }); test('authThunk registerUser throws error', () => { const store = mockStore({}); const mockAxios = new MockAdapter(axios); mockAxios .onPost(`${API_URL}/auth/register`) .networkError(); store .dispatch(registerUser({})) .catch((error) => { expect(error); }); });
+            .then(() => {
+                expect(store.getActions()).toEqual(expectedPayload);
+            });
+    });
+    test('authThunk registerUser throws error', () => {
+        const store = mockStore({});
+        const mockAxios = new MockAdapter(axios);
+        mockAxios.onPost(`${API_URL}/auth/register`).networkError();
+        store.dispatch(registerUser({})).catch((error) => {
+            expect(error);
+        });
+    });
 
     test('authThunk protectedTest', () => {
         const store = mockStore({});

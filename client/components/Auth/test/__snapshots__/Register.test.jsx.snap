@@ -113,7 +113,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "host",
     "props": Object {
       "children": Array [
@@ -206,7 +206,7 @@ ShallowWrapper {
       "",
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -294,7 +294,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -335,7 +335,7 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -357,7 +357,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "First Name",
@@ -369,7 +369,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -386,7 +386,7 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -408,7 +408,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Last Name",
@@ -420,7 +420,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -440,7 +440,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
@@ -463,7 +463,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -485,7 +485,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Email",
@@ -497,7 +497,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "className": "form-control",
@@ -516,7 +516,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
@@ -539,7 +539,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -561,7 +561,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Password",
@@ -573,7 +573,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "className": "form-control",
@@ -592,7 +592,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": "Register",
@@ -611,7 +611,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
@@ -704,7 +704,7 @@ ShallowWrapper {
         "",
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -792,7 +792,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -833,7 +833,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -855,7 +855,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "First Name",
@@ -867,7 +867,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "className": "form-control",
@@ -884,7 +884,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -906,7 +906,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "Last Name",
@@ -918,7 +918,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "className": "form-control",
@@ -938,7 +938,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
@@ -961,7 +961,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -983,7 +983,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Email",
@@ -995,7 +995,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -1014,7 +1014,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
@@ -1037,7 +1037,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -1059,7 +1059,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Password",
@@ -1071,7 +1071,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -1090,7 +1090,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Register",
@@ -1230,7 +1230,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "host",
     "props": Object {
       "children": Array [
@@ -1331,7 +1331,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": <span>
@@ -1346,7 +1346,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -1362,7 +1362,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Error:",
@@ -1381,7 +1381,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -1469,7 +1469,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -1510,7 +1510,7 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -1532,7 +1532,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "First Name",
@@ -1544,7 +1544,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -1561,7 +1561,7 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -1583,7 +1583,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Last Name",
@@ -1595,7 +1595,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -1615,7 +1615,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
@@ -1638,7 +1638,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -1660,7 +1660,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Email",
@@ -1672,7 +1672,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "className": "form-control",
@@ -1691,7 +1691,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
@@ -1714,7 +1714,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -1736,7 +1736,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Password",
@@ -1748,7 +1748,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "className": "form-control",
@@ -1767,7 +1767,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": "Register",
@@ -1786,7 +1786,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
@@ -1887,7 +1887,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": <span>
@@ -1902,7 +1902,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -1918,7 +1918,7 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": "Error:",
@@ -1937,7 +1937,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -2025,7 +2025,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -2066,7 +2066,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -2088,7 +2088,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "First Name",
@@ -2100,7 +2100,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "className": "form-control",
@@ -2117,7 +2117,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -2139,7 +2139,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "Last Name",
@@ -2151,7 +2151,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "className": "form-control",
@@ -2171,7 +2171,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
@@ -2194,7 +2194,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -2216,7 +2216,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Email",
@@ -2228,7 +2228,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -2247,7 +2247,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
@@ -2270,7 +2270,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -2292,7 +2292,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Password",
@@ -2304,7 +2304,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -2323,7 +2323,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Register",

@@ -1,9 +1,13 @@
 node_modules/
 dist/bundle.js
 dist/esdoc
-dist/lcov-report
 dist
 npm-debug.log
+
+# Ignore test-related files
+dist/lcov-report
+/coverage.data
+/coverage/
 
 .DS_Store
 .DS_STORE

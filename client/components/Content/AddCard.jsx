@@ -1,28 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-
-import { Field, reduxForm } from 'redux-form';
-
-import ReactMde, { ReactMdeCommands } from 'react-mde';
-
-import { addNewCard } from './thunks/contentThunks.jsx';
-import { renderField } from '../FormComponents/formComponents.jsx';
-
 import 'font-awesome/css/font-awesome.css';
 import 'react-mde/lib/styles/css/react-mde.css';
 import 'react-mde/lib/styles/css/react-mde-command-styles.css';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Field, reduxForm } from 'redux-form';
+
+import { addNewCard } from './thunks/contentThunks.jsx';
+import {
+    renderField,
+    mdeEditorField,
+} from '../FormComponents/formComponents.jsx';
 
 import './AddCard.css';
-import mdtest from '../../../assets/content/mdtest.md';
 
 const mapStateToProps = state => (() => {
     const initialValues = {
-        content: {
-            text: mdtest,
+        mdContent: {
+            text: '',
             selection: null,
         },
     };
@@ -66,7 +64,7 @@ export default class AddCard extends React.Component {
         handleAddNewCard(
             {
                 label: formProps.label,
-                content: formProps.content.text
+                content: formProps.mdContent.text,
             });
     };
 
@@ -105,36 +103,13 @@ export default class AddCard extends React.Component {
                     </div>
                     <div className='row'>
                         <div className='column'>
-                            <label htmlFor='content'>Content</label>
+                            <label htmlFor='mdContent'>Content</label>
                         </div>
                         <Field
-                            name='content'
+                            name='mdContent'
                             className='markdown-body'
-                            component={(props) => {
-                                return (
-                                    <ReactMde
-                                        value={props.input.value}
-                                        onChange={param => props.input.onChange(param)}
-                                        commands={ReactMdeCommands}
-                                        textAreaProps={{
-                                            id: 'ta1',
-                                            name: 'ta1',
-                                        }}
-                                    />
-                                );
-                            }}
+                            component={mdeEditorField}
                         />
-                    </div>
-                    <div>
-                        {/*<ReactMde*/}
-                        {/*textAreaProps={{*/}
-                        {/*id: 'ta1',*/}
-                        {/*name: 'ta1',*/}
-                        {/*}}*/}
-                        {/*value={this.state.reactMdeValue}*/}
-                        {/*onChange={this.handleValueChange}*/}
-                        {/*commands={ReactMdeCommands}*/}
-                        {/*/>*/}
                     </div>
                     <button type='submit'>Save</button>
                 </form>

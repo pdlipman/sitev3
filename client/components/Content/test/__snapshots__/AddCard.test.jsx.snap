@@ -36,7 +36,14 @@ ShallowWrapper {
     form="addCard"
     handleAddNewCard={[Function]}
     handleSubmit={[Function]}
-    initialValues={undefined}
+    initialValues={
+      Object {
+        "mdContent": Object {
+          "selection": null,
+          "text": "",
+        },
+      }
+    }
     initialize={[Function]}
     initialized={false}
     invalid={false}
@@ -111,7 +118,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "host",
     "props": Object {
       "children": Array [
@@ -126,7 +133,7 @@ ShallowWrapper {
               className="column"
             >
               <label
-                htmlFor="email"
+                htmlFor="label"
               >
                 Label
               </label>
@@ -145,17 +152,16 @@ ShallowWrapper {
               className="column"
             >
               <label
-                htmlFor="password"
+                htmlFor="mdContent"
               >
                 Content
               </label>
-              <Field
-                className="form-control"
-                component={[Function]}
-                name="content"
-                type="textarea"
-              />
             </div>
+            <Field
+              className="markdown-body"
+              component={[Function]}
+              name="mdContent"
+            />
           </div>
           <button
             type="submit"
@@ -170,7 +176,7 @@ ShallowWrapper {
       "",
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -181,7 +187,7 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="email"
+                  htmlFor="label"
                 >
                   Label
                 </label>
@@ -200,17 +206,16 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="password"
+                  htmlFor="mdContent"
                 >
                   Content
                 </label>
-                <Field
-                  className="form-control"
-                  component={[Function]}
-                  name="content"
-                  type="textarea"
-                />
               </div>
+              <Field
+                className="markdown-body"
+                component={[Function]}
+                name="mdContent"
+              />
             </div>,
             <button
               type="submit"
@@ -224,14 +229,14 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
                 className="column"
               >
                 <label
-                  htmlFor="email"
+                  htmlFor="label"
                 >
                   Label
                 </label>
@@ -247,12 +252,12 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   <label
-                    htmlFor="email"
+                    htmlFor="label"
                   >
                     Label
                   </label>,
@@ -269,11 +274,11 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Label",
-                    "htmlFor": "email",
+                    "htmlFor": "label",
                   },
                   "ref": null,
                   "rendered": "Label",
@@ -281,7 +286,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "className": "form-control",
@@ -300,83 +305,75 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div
-                className="column"
-              >
-                <label
-                  htmlFor="password"
+              "children": Array [
+                <div
+                  className="column"
                 >
-                  Content
-                </label>
+                  <label
+                    htmlFor="mdContent"
+                  >
+                    Content
+                  </label>
+                </div>,
                 <Field
-                  className="form-control"
+                  className="markdown-body"
                   component={[Function]}
-                  name="content"
-                  type="textarea"
-                />
-              </div>,
+                  name="mdContent"
+                />,
+              ],
               "className": "row",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <label
-                    htmlFor="password"
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <label
+                    htmlFor="mdContent"
                   >
                     Content
                   </label>,
-                  <Field
-                    className="form-control"
-                    component={[Function]}
-                    name="content"
-                    type="textarea"
-                  />,
-                ],
-                "className": "column",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
+                  "className": "column",
+                },
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Content",
-                    "htmlFor": "password",
+                    "htmlFor": "mdContent",
                   },
                   "ref": null,
                   "rendered": "Content",
                   "type": "label",
                 },
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "class",
-                  "props": Object {
-                    "className": "form-control",
-                    "component": [Function],
-                    "name": "content",
-                    "type": "textarea",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "className": "markdown-body",
+                  "component": [Function],
+                  "name": "mdContent",
                 },
-              ],
-              "type": "div",
-            },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": "Save",
@@ -395,7 +392,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
@@ -410,7 +407,7 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="email"
+                  htmlFor="label"
                 >
                   Label
                 </label>
@@ -429,17 +426,16 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="password"
+                  htmlFor="mdContent"
                 >
                   Content
                 </label>
-                <Field
-                  className="form-control"
-                  component={[Function]}
-                  name="content"
-                  type="textarea"
-                />
               </div>
+              <Field
+                className="markdown-body"
+                component={[Function]}
+                name="mdContent"
+              />
             </div>
             <button
               type="submit"
@@ -454,7 +450,7 @@ ShallowWrapper {
         "",
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -465,7 +461,7 @@ ShallowWrapper {
                   className="column"
                 >
                   <label
-                    htmlFor="email"
+                    htmlFor="label"
                   >
                     Label
                   </label>
@@ -484,17 +480,16 @@ ShallowWrapper {
                   className="column"
                 >
                   <label
-                    htmlFor="password"
+                    htmlFor="mdContent"
                   >
                     Content
                   </label>
-                  <Field
-                    className="form-control"
-                    component={[Function]}
-                    name="content"
-                    type="textarea"
-                  />
                 </div>
+                <Field
+                  className="markdown-body"
+                  component={[Function]}
+                  name="mdContent"
+                />
               </div>,
               <button
                 type="submit"
@@ -508,14 +503,14 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
                   className="column"
                 >
                   <label
-                    htmlFor="email"
+                    htmlFor="label"
                   >
                     Label
                   </label>
@@ -531,12 +526,12 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     <label
-                      htmlFor="email"
+                      htmlFor="label"
                     >
                       Label
                     </label>,
@@ -553,11 +548,11 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Label",
-                      "htmlFor": "email",
+                      "htmlFor": "label",
                     },
                     "ref": null,
                     "rendered": "Label",
@@ -565,7 +560,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -584,83 +579,75 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div
-                  className="column"
-                >
-                  <label
-                    htmlFor="password"
+                "children": Array [
+                  <div
+                    className="column"
                   >
-                    Content
-                  </label>
+                    <label
+                      htmlFor="mdContent"
+                    >
+                      Content
+                    </label>
+                  </div>,
                   <Field
-                    className="form-control"
+                    className="markdown-body"
                     component={[Function]}
-                    name="content"
-                    type="textarea"
-                  />
-                </div>,
+                    name="mdContent"
+                  />,
+                ],
                 "className": "row",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <label
-                      htmlFor="password"
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <label
+                      htmlFor="mdContent"
                     >
                       Content
                     </label>,
-                    <Field
-                      className="form-control"
-                      component={[Function]}
-                      name="content"
-                      type="textarea"
-                    />,
-                  ],
-                  "className": "column",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
+                    "className": "column",
+                  },
+                  "ref": null,
+                  "rendered": Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Content",
-                      "htmlFor": "password",
+                      "htmlFor": "mdContent",
                     },
                     "ref": null,
                     "rendered": "Content",
                     "type": "label",
                   },
-                  Object {
-                    "instance": null,
-                    "key": null,
-                    "nodeType": "class",
-                    "props": Object {
-                      "className": "form-control",
-                      "component": [Function],
-                      "name": "content",
-                      "type": "textarea",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": "markdown-body",
+                    "component": [Function],
+                    "name": "mdContent",
                   },
-                ],
-                "type": "div",
-              },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Save",
@@ -723,7 +710,14 @@ ShallowWrapper {
     form="addCard"
     handleAddNewCard={[Function]}
     handleSubmit={[Function]}
-    initialValues={undefined}
+    initialValues={
+      Object {
+        "mdContent": Object {
+          "selection": null,
+          "text": "",
+        },
+      }
+    }
     initialize={[Function]}
     initialized={false}
     invalid={false}
@@ -798,7 +792,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "host",
     "props": Object {
       "children": Array [
@@ -822,7 +816,7 @@ ShallowWrapper {
               className="column"
             >
               <label
-                htmlFor="email"
+                htmlFor="label"
               >
                 Label
               </label>
@@ -841,17 +835,16 @@ ShallowWrapper {
               className="column"
             >
               <label
-                htmlFor="password"
+                htmlFor="mdContent"
               >
                 Content
               </label>
-              <Field
-                className="form-control"
-                component={[Function]}
-                name="content"
-                type="textarea"
-              />
             </div>
+            <Field
+              className="markdown-body"
+              component={[Function]}
+              name="mdContent"
+            />
           </div>
           <button
             type="submit"
@@ -865,7 +858,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": <span>
@@ -880,7 +873,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -896,7 +889,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Error:",
@@ -915,7 +908,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -926,7 +919,7 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="email"
+                  htmlFor="label"
                 >
                   Label
                 </label>
@@ -945,17 +938,16 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="password"
+                  htmlFor="mdContent"
                 >
                   Content
                 </label>
-                <Field
-                  className="form-control"
-                  component={[Function]}
-                  name="content"
-                  type="textarea"
-                />
               </div>
+              <Field
+                className="markdown-body"
+                component={[Function]}
+                name="mdContent"
+              />
             </div>,
             <button
               type="submit"
@@ -969,14 +961,14 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
                 className="column"
               >
                 <label
-                  htmlFor="email"
+                  htmlFor="label"
                 >
                   Label
                 </label>
@@ -992,12 +984,12 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   <label
-                    htmlFor="email"
+                    htmlFor="label"
                   >
                     Label
                   </label>,
@@ -1014,11 +1006,11 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Label",
-                    "htmlFor": "email",
+                    "htmlFor": "label",
                   },
                   "ref": null,
                   "rendered": "Label",
@@ -1026,7 +1018,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "className": "form-control",
@@ -1045,83 +1037,75 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div
-                className="column"
-              >
-                <label
-                  htmlFor="password"
+              "children": Array [
+                <div
+                  className="column"
                 >
-                  Content
-                </label>
+                  <label
+                    htmlFor="mdContent"
+                  >
+                    Content
+                  </label>
+                </div>,
                 <Field
-                  className="form-control"
+                  className="markdown-body"
                   component={[Function]}
-                  name="content"
-                  type="textarea"
-                />
-              </div>,
+                  name="mdContent"
+                />,
+              ],
               "className": "row",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <label
-                    htmlFor="password"
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <label
+                    htmlFor="mdContent"
                   >
                     Content
                   </label>,
-                  <Field
-                    className="form-control"
-                    component={[Function]}
-                    name="content"
-                    type="textarea"
-                  />,
-                ],
-                "className": "column",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
+                  "className": "column",
+                },
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Content",
-                    "htmlFor": "password",
+                    "htmlFor": "mdContent",
                   },
                   "ref": null,
                   "rendered": "Content",
                   "type": "label",
                 },
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "class",
-                  "props": Object {
-                    "className": "form-control",
-                    "component": [Function],
-                    "name": "content",
-                    "type": "textarea",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "className": "markdown-body",
+                  "component": [Function],
+                  "name": "mdContent",
                 },
-              ],
-              "type": "div",
-            },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": "Save",
@@ -1140,7 +1124,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
@@ -1164,7 +1148,7 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="email"
+                  htmlFor="label"
                 >
                   Label
                 </label>
@@ -1183,17 +1167,16 @@ ShallowWrapper {
                 className="column"
               >
                 <label
-                  htmlFor="password"
+                  htmlFor="mdContent"
                 >
                   Content
                 </label>
-                <Field
-                  className="form-control"
-                  component={[Function]}
-                  name="content"
-                  type="textarea"
-                />
               </div>
+              <Field
+                className="markdown-body"
+                component={[Function]}
+                name="mdContent"
+              />
             </div>
             <button
               type="submit"
@@ -1207,7 +1190,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": <span>
@@ -1222,7 +1205,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -1238,7 +1221,7 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": "Error:",
@@ -1257,7 +1240,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -1268,7 +1251,7 @@ ShallowWrapper {
                   className="column"
                 >
                   <label
-                    htmlFor="email"
+                    htmlFor="label"
                   >
                     Label
                   </label>
@@ -1287,17 +1270,16 @@ ShallowWrapper {
                   className="column"
                 >
                   <label
-                    htmlFor="password"
+                    htmlFor="mdContent"
                   >
                     Content
                   </label>
-                  <Field
-                    className="form-control"
-                    component={[Function]}
-                    name="content"
-                    type="textarea"
-                  />
                 </div>
+                <Field
+                  className="markdown-body"
+                  component={[Function]}
+                  name="mdContent"
+                />
               </div>,
               <button
                 type="submit"
@@ -1311,14 +1293,14 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
                   className="column"
                 >
                   <label
-                    htmlFor="email"
+                    htmlFor="label"
                   >
                     Label
                   </label>
@@ -1334,12 +1316,12 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     <label
-                      htmlFor="email"
+                      htmlFor="label"
                     >
                       Label
                     </label>,
@@ -1356,11 +1338,11 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Label",
-                      "htmlFor": "email",
+                      "htmlFor": "label",
                     },
                     "ref": null,
                     "rendered": "Label",
@@ -1368,7 +1350,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "className": "form-control",
@@ -1387,83 +1369,75 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div
-                  className="column"
-                >
-                  <label
-                    htmlFor="password"
+                "children": Array [
+                  <div
+                    className="column"
                   >
-                    Content
-                  </label>
+                    <label
+                      htmlFor="mdContent"
+                    >
+                      Content
+                    </label>
+                  </div>,
                   <Field
-                    className="form-control"
+                    className="markdown-body"
                     component={[Function]}
-                    name="content"
-                    type="textarea"
-                  />
-                </div>,
+                    name="mdContent"
+                  />,
+                ],
                 "className": "row",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <label
-                      htmlFor="password"
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <label
+                      htmlFor="mdContent"
                     >
                       Content
                     </label>,
-                    <Field
-                      className="form-control"
-                      component={[Function]}
-                      name="content"
-                      type="textarea"
-                    />,
-                  ],
-                  "className": "column",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
+                    "className": "column",
+                  },
+                  "ref": null,
+                  "rendered": Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Content",
-                      "htmlFor": "password",
+                      "htmlFor": "mdContent",
                     },
                     "ref": null,
                     "rendered": "Content",
                     "type": "label",
                   },
-                  Object {
-                    "instance": null,
-                    "key": null,
-                    "nodeType": "class",
-                    "props": Object {
-                      "className": "form-control",
-                      "component": [Function],
-                      "name": "content",
-                      "type": "textarea",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": "markdown-body",
+                    "component": [Function],
+                    "name": "mdContent",
                   },
-                ],
-                "type": "div",
-              },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Save",

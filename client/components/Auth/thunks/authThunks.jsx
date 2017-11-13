@@ -40,7 +40,7 @@ export function errorHandler(dispatch, error, type) {
 }
 
 export function loginUser({ email, password }) {
-    return (dispatch) => axios
+    return dispatch => axios
         .post(`${API_URL}/auth/login`, { email, password })
         .then((response) => {
             const cookie = new Cookies();
@@ -57,7 +57,7 @@ export function loginUser({ email, password }) {
 }
 
 export function registerUser({ email, firstName, lastName, password }) {
-    return (dispatch) => axios
+    return dispatch => axios
         .post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
         .then((response) => {
             const cookie = new Cookies();

@@ -21,7 +21,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "function",
     "props": Object {
       "as": "h2",
@@ -42,7 +42,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "as": "i",
@@ -54,7 +54,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
@@ -69,7 +69,7 @@ ShallowWrapper {
           "Test Contents",
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "function",
             "props": Object {
               "children": "",
@@ -87,7 +87,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
         "as": "h2",
@@ -108,7 +108,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "as": "i",
@@ -120,7 +120,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
@@ -135,7 +135,7 @@ ShallowWrapper {
             "Test Contents",
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "function",
               "props": Object {
                 "children": "",

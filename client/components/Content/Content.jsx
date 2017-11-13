@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 import { Card } from 'semantic-ui-react';
 
 import MarkdownPage from '../Pages/MarkdownPage.jsx';
-import resume from '../../../assets/content/philip-lipman-resume-07oct2017.md';
-import mdtest from '../../../assets/content/mdtest.md';
 
 import {
     getCards,
@@ -87,9 +85,9 @@ export default class Content extends React.Component {
             cards,
         } = this.props;
 
-        const selectedCard = cards.filter((card) => {
-            return card._id === selectedCardId; // eslint-disable-line no-underscore-dangle
-        }).shift();
+        const selectedCard = cards
+            .filter(card => card._id === selectedCardId) // eslint-disable-line no-underscore-dangle, max-len
+            .shift();
 
         const result = (
             <MarkdownPage
@@ -98,7 +96,6 @@ export default class Content extends React.Component {
         );
 
         return result;
-
     }
 
     renderCards() {
@@ -125,7 +122,7 @@ export default class Content extends React.Component {
         } = this.props;
         return (
             <div>
-                Selected card id: { selectedCardId }
+                Selected card id: {selectedCardId}
                 {this.isRole('Admin') && this.handleAddCard()}
                 <Card.Group
                     itemsPerRow={3}
@@ -134,7 +131,7 @@ export default class Content extends React.Component {
                     {this.renderCards()}
                 </Card.Group>
 
-                { selectedCardId && this.renderCardContent() }
+                {selectedCardId && this.renderCardContent()}
             </div>
         );
     }

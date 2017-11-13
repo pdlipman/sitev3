@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1510388569029" clover="3.2.0">
-  <project timestamp="1510388569029" name="All files">
-    <metrics statements="138" coveredstatements="138" conditionals="48" coveredconditionals="48" methods="58" coveredmethods="58" elements="244" coveredelements="244" complexity="0" loc="138" ncloc="138" packages="13" files="16" classes="16">
+<coverage generated="1510553494229" clover="3.2.0">
+  <project timestamp="1510553494229" name="All files">
+    <metrics statements="144" coveredstatements="127" conditionals="48" coveredconditionals="48" methods="62" coveredmethods="55" elements="254" coveredelements="230" complexity="0" loc="144" ncloc="144" packages="14" files="17" classes="17">
       <package name="sitev3">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="jestSetup.js" path="/Users/philiplipman/IdeaProjects/sitev3/jestSetup.js">
@@ -54,10 +54,10 @@
           <line num="2" count="5" type="stmt"/>
           <line num="3" count="5" type="stmt"/>
           <line num="4" count="5" type="stmt"/>
-          <line num="7" count="3" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
           <line num="14" count="1" type="stmt"/>
           <line num="21" count="2" type="stmt"/>
-          <line num="27" count="2" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
         </file>
       </package>
       <package name="sitev3.client.components.Auth.reducers">
@@ -74,58 +74,61 @@
         </file>
       </package>
       <package name="sitev3.client.components.Auth.thunks">
-        <metrics statements="34" coveredstatements="34" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="15"/>
+        <metrics statements="33" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="12"/>
         <file name="authThunks.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/components/Auth/thunks/authThunks.jsx">
-          <metrics statements="34" coveredstatements="34" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="15"/>
-          <line num="6" count="3" type="stmt"/>
+          <metrics statements="33" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="12"/>
           <line num="11" count="2" type="stmt"/>
           <line num="12" count="1" type="stmt"/>
           <line num="13" count="1" type="stmt"/>
           <line num="14" count="1" type="stmt"/>
           <line num="15" count="1" type="stmt"/>
-          <line num="20" count="8" type="stmt"/>
-          <line num="22" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="10" type="stmt"/>
+          <line num="22" count="10" type="cond" truecount="2" falsecount="0"/>
           <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="25" count="3" type="stmt"/>
-          <line num="28" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="8" type="stmt"/>
+          <line num="28" count="10" type="cond" truecount="2" falsecount="0"/>
           <line num="29" count="1" type="stmt"/>
           <line num="33" count="1" type="stmt"/>
-          <line num="35" count="4" type="stmt"/>
+          <line num="35" count="9" type="stmt"/>
           <line num="43" count="2" type="stmt"/>
-          <line num="46" count="1" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
-          <line num="51" count="1" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
-          <line num="53" count="1" type="stmt"/>
-          <line num="54" count="1" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
           <line num="56" count="2" type="stmt"/>
           <line num="60" count="2" type="stmt"/>
-          <line num="63" count="1" type="stmt"/>
-          <line num="67" count="1" type="stmt"/>
-          <line num="68" count="1" type="stmt"/>
-          <line num="69" count="1" type="stmt"/>
-          <line num="70" count="1" type="stmt"/>
-          <line num="72" count="1" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="70" count="0" type="stmt"/>
+          <line num="72" count="2" type="stmt"/>
           <line num="76" count="2" type="stmt"/>
           <line num="77" count="2" type="stmt"/>
           <line num="78" count="2" type="stmt"/>
-          <line num="87" count="1" type="stmt"/>
-          <line num="88" count="1" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="88" count="2" type="stmt"/>
         </file>
       </package>
       <package name="sitev3.client.components.Content">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
         <file name="AddCard.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/components/Content/AddCard.jsx">
-          <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
-          <line num="12" count="3" type="stmt"/>
-          <line num="16" count="3" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
+          <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="23" count="3" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
+          <line num="35" count="3" type="stmt"/>
           <line num="39" count="1" type="stmt"/>
-          <line num="45" count="3" type="stmt"/>
-          <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="56" count="3" type="stmt"/>
           <line num="58" count="3" type="stmt"/>
+          <line num="59" count="3" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="76" count="3" type="stmt"/>
+          <line num="77" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="87" count="3" type="stmt"/>
+          <line num="89" count="3" type="stmt"/>
         </file>
       </package>
       <package name="sitev3.client.components.Content.actions">
@@ -135,7 +138,7 @@
           <line num="1" count="4" type="stmt"/>
           <line num="2" count="4" type="stmt"/>
           <line num="3" count="4" type="stmt"/>
-          <line num="6" count="2" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
           <line num="13" count="1" type="stmt"/>
           <line num="20" count="2" type="stmt"/>
         </file>
@@ -153,36 +156,38 @@
         </file>
       </package>
       <package name="sitev3.client.components.Content.thunks">
-        <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11"/>
+        <metrics statements="18" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="9"/>
         <file name="contentThunks.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/components/Content/thunks/contentThunks.jsx">
-          <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11"/>
-          <line num="6" count="2" type="stmt"/>
-          <line num="9" count="6" type="stmt"/>
-          <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
-          <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="14" count="2" type="stmt"/>
-          <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="23" count="3" type="stmt"/>
-          <line num="31" count="3" type="stmt"/>
-          <line num="36" count="1" type="stmt"/>
-          <line num="37" count="1" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
-          <line num="45" count="2" type="stmt"/>
-          <line num="46" count="2" type="stmt"/>
+          <metrics statements="18" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="9"/>
+          <line num="11" count="8" type="stmt"/>
+          <line num="13" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="19" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="25" count="7" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="42" count="2" type="stmt"/>
           <line num="47" count="2" type="stmt"/>
-          <line num="61" count="1" type="stmt"/>
-          <line num="64" count="1" type="stmt"/>
-          <line num="70" count="1" type="stmt"/>
-          <line num="71" count="1" type="stmt"/>
+          <line num="48" count="2" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="66" count="2" type="stmt"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="73" count="1" type="stmt"/>
         </file>
       </package>
       <package name="sitev3.client.components.FormComponents">
-        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="1"/>
         <file name="formComponents.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/components/FormComponents/formComponents.jsx">
-          <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-          <line num="3" count="4" type="stmt"/>
-          <line num="14" count="2" type="stmt"/>
+          <metrics statements="5" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="1"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="26" count="4" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
         </file>
       </package>
       <package name="sitev3.client.components.Layout.Header">
@@ -225,6 +230,13 @@
           <line num="21" count="10" type="stmt"/>
           <line num="24" count="32" type="stmt"/>
           <line num="27" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="sitev3.client.utils.config">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="config.jsx" path="/Users/philiplipman/IdeaProjects/sitev3/client/utils/config/config.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
         </file>
       </package>
     </metrics>

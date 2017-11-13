@@ -12,6 +12,10 @@ const testStateInitial = {
     content: {
         error: '',
     },
+    mdContent: {
+        text: '',
+        selection: null,
+    },
 };
 
 const testStateWithError = {
@@ -25,8 +29,10 @@ function shallowWrapper(props, testState = testStateInitial) {
     const wrapper = shallowUntilTarget(
         <AddCard
             store={store}
-            handleSubmit={() => {}}
-            handleAddNewCard={() => {}}
+            handleSubmit={() => {
+            }}
+            handleAddNewCard={() => {
+            }}
             {...props}
         />,
         'AddCard',
@@ -51,7 +57,15 @@ describe('AddCard.jsx', () => {
         AddCardRewireApi.__Rewire__('addNewCard', () => mockAddCard); // eslint-disable-line no-underscore-dangle
 
         const wrapper = shallowWrapper();
-        wrapper.instance().handleAddCardSubmit({ val: 'hello world' });
+        wrapper.instance().handleAddCardSubmit(
+            {
+                label: 'hello world',
+                mdContent: {
+                    test: 'hey now',
+                    selection: null,
+                },
+            },
+        );
         expect(mockAddCard).toHaveBeenCalled();
         AddCardRewireApi.__ResetDependency__('addNewCard'); // eslint-disable-line no-underscore-dangle
     });
